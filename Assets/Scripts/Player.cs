@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
         {
             vidas--;
             LivesText.text = "Vidas: " + vidas;
+            Destroy(other.gameObject);
+            
             if (vidas <= 0)
             {
                 Time.timeScale = 0;
@@ -46,6 +48,7 @@ public class Player : MonoBehaviour
         {
             puntuacion -= 1;
             ScoreText.text = "Cangreburgers restantes: " + puntuacion;
+            Destroy(other.gameObject);
 
             if (puntuacion < 1)
             {

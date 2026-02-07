@@ -1499,8 +1499,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1111084619}
   - component: {fileID: 1111084618}
-  - component: {fileID: 1111084620}
   - component: {fileID: 1111084621}
+  - component: {fileID: 1111084622}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1539,7 +1539,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1111084620
+--- !u!114 &1111084621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111084617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4856c7985d6c19d4b92515f8273cd51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FaceJumpController
+  face: {fileID: 0}
+  playerRigidbody: {fileID: 871263450}
+  player: {fileID: 871263451}
+  jumpForce: 7
+  pitchThreshold: -15
+  cooldown: 0.8
+--- !u!114 &1111084622
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1553,24 +1571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::faceDetector
   faceManager: {fileID: 455082347}
   controller: {fileID: 1111084618}
---- !u!114 &1111084621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111084617}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4856c7985d6c19d4b92515f8273cd51f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FaceJumpController
-  face: {fileID: 0}
-  playerRigidbody: {fileID: 871263450}
-  player: {fileID: 0}
-  jumpForce: 4
-  pitchThreshold: -15
-  cooldown: 0.8
+  faceJumpController: {fileID: 1111084621}
 --- !u!1 &1155875643
 GameObject:
   m_ObjectHideFlags: 0
